@@ -1,0 +1,28 @@
+name = "golf"
+
+[variables]
+version = "0.0.1"
+cflags = "-Wall -Wextra -g"
+libs = "-lraylib -lm -lgoreland -Ldeps/goreland"
+include = "-Ideps/goreland"
+
+[task.build]
+description = "Build the project."
+commands = [
+    "gcc -c $cflags game.c $libs $include",
+    "gcc -c $cflags render.c $libs $include",
+    "gcc -c $cflags state.c $libs $include",
+    "gcc -o golf $cflags game.o render.o state.o $libs $include",
+    "groom clean"
+]
+
+[task.clean]
+description = "Clean the project"
+command = "rm game.o render.o state.o"
+
+[task.run]
+commands = [
+    "scp golf soyuz:~/.gitter/",
+    "ssh soyuz DISPLAY=:0 /home/pranav/.gitter/golf"
+]
+depends = [ "build" ]

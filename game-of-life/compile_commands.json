@@ -1,0 +1,50 @@
+[
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-c",
+      "goreland.c"
+    ],
+    "directory": "/home/pratham/code/game-of-life/deps/goreland",
+    "file": "/home/pratham/code/game-of-life/deps/goreland/goreland.c"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-c",
+      "-Wall",
+      "-Wextra",
+      "-g",
+      "-Ideps/goreland",
+      "game.c"
+    ],
+    "directory": "/home/pratham/code/game-of-life",
+    "file": "/home/pratham/code/game-of-life/game.c"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-c",
+      "-Wall",
+      "-Wextra",
+      "-g",
+      "-Ideps/goreland",
+      "render.c"
+    ],
+    "directory": "/home/pratham/code/game-of-life",
+    "file": "/home/pratham/code/game-of-life/render.c"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-c",
+      "-Wall",
+      "-Wextra",
+      "-g",
+      "-Ideps/goreland",
+      "state.c"
+    ],
+    "directory": "/home/pratham/code/game-of-life",
+    "file": "/home/pratham/code/game-of-life/state.c"
+  }
+]
