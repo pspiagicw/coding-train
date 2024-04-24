@@ -21,7 +21,7 @@ int main() {
 
   InitWindow(screen_width, screen_height, "Game of Life");
 
-  SetTargetFPS(10);
+  SetTargetFPS(60);
 
   State *state = initial();
   randomize(state);
